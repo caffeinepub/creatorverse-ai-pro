@@ -1,0 +1,176 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-implement-ai-chat-interface-with-conversational-memory-that-provides-youtube-creator-advice-including-tips-on-titles-viral-content-scripts-and-seo-when-users-ask-questions",
+      "featureTitle": "Implement AI chat interface with conversational memory that provides YouTube creator advice including tips on titles, viral content, scripts, and SEO when users ask questions",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/ChatInterface.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-1"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-create-title-generator-that-takes-a-topic-input-and-generates-youtube-video-titles-using-emotional-hooks-including-secret-of-shocking-truth-about-top-5-ultimate-guide-to-and-you-must-know-prefixes-randomly-selected",
+      "featureTitle": "Create title generator that takes a topic input and generates YouTube video titles using emotional hooks including '🔥 Secret of', '😱 Shocking Truth About', 'Top 5', 'Ultimate Guide to', and 'You Must Know' prefixes randomly selected",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/TitleGenerator.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-2"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-build-script-generator-that-creates-structured-youtube-video-scripts-with-sections-for-hook-intro-three-main-points-and-ending-call-to-action-using-the-entered-topic",
+      "featureTitle": "Build script generator that creates structured YouTube video scripts with sections for hook, intro, three main points, and ending call-to-action using the entered topic",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/ScriptGenerator.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-3"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-implement-seo-score-checker-that-calculates-a-score-out-of-100-based-on-topic-length-and-provides-optimization-tips-for-long-tail-keywords-and-emotional-words",
+      "featureTitle": "Implement SEO score checker that calculates a score out of 100 based on topic length and provides optimization tips for long-tail keywords and emotional words",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/SEOChecker.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-4"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-create-tags-generator-that-produces-comma-separated-youtube-tags-including-the-topic-viral-youtube-growth-trending-video-and-how-to",
+      "featureTitle": "Create tags generator that produces comma-separated YouTube tags including the topic, 'viral', 'youtube growth', 'trending video', and 'how to'",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/TagsGenerator.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-5"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-build-hashtag-generator-that-creates-space-removed-hashtags-from-the-topic-and-appends-viral-youtube-creator-tags",
+      "featureTitle": "Build hashtag generator that creates space-removed hashtags from the topic and appends '#viral #youtube #creator' tags",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/HashtagGenerator.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-6"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-implement-ai-voice-generator-with-5-voice-styles-normal-deep-soft-robot-fast-that-uses-browser-speech-synthesis-to-speak-user-entered-text-with-different-rate-and-pitch-settings-for-each-style",
+      "featureTitle": "Implement AI voice generator with 5 voice styles (normal, deep, soft, robot, fast) that uses browser speech synthesis to speak user-entered text with different rate and pitch settings for each style",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/VoiceGenerator.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-7"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-create-thumbnail-generator-using-html-canvas-that-draws-a-yellow-background-facc15-with-user-entered-text-centered-in-bold-black-font-on-a-400x250-pixel-canvas",
+      "featureTitle": "Create thumbnail generator using HTML canvas that draws a yellow background (#facc15) with user-entered text centered in bold black font on a 400x250 pixel canvas",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/ThumbnailGenerator.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-8"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-apply-dark-theme-design-with-slate-background-0f172a-white-text-green-action-buttons-22c55e-with-16a34a-hover-rounded-input-fields-and-buttons-and-dark-chat-box-020617-matching-the-reference-design",
+      "featureTitle": "Apply dark theme design with slate background (#0f172a), white text, green action buttons (#22c55e with #16a34a hover), rounded input fields and buttons, and dark chat box (#020617) matching the reference design",
+      "files": [
+        "frontend/src/index.css",
+        "frontend/tailwind.config.js"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-9"
+      ],
+      "confidence": "high"
+    }
+  ]
+}

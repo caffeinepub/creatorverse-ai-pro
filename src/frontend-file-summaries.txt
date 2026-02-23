@@ -1,0 +1,13 @@
+{
+  "frontend/src/App.tsx": "Main application component that orchestrates the CreatorVerse AI PRO layout with header, all content generation tools, and footer with proper branding and attribution.",
+  "frontend/src/components/ChatInterface.tsx": "AI chat component with scrollable message history that provides YouTube creator advice based on keyword pattern matching with user/AI message bubbles.",
+  "frontend/src/components/TitleGenerator.tsx": "Title generation component that accepts topic input and randomly combines it with emotional hook prefixes to create engaging YouTube video titles.",
+  "frontend/src/components/ScriptGenerator.tsx": "Script generation component that creates structured YouTube video scripts with hook, intro, main points, and CTA sections using the shared topic state.",
+  "frontend/src/components/SEOChecker.tsx": "SEO score calculator component that evaluates topic length and provides optimization tips with score-based feedback.",
+  "frontend/src/components/TagsGenerator.tsx": "Tags generation component that creates comma-separated YouTube tags including the topic and common viral keywords.",
+  "frontend/src/components/HashtagGenerator.tsx": "Hashtag generation component that removes spaces from topics and appends standard social media hashtags for YouTube promotion.",
+  "frontend/src/components/VoiceGenerator.tsx": "Voice synthesis component with 5 voice styles (normal, deep, soft, robot, fast) using browser SpeechSynthesis API with configurable rate and pitch.",
+  "frontend/src/components/ThumbnailGenerator.tsx": "Canvas-based thumbnail generator that draws user text centered on a yellow background with word wrapping support.",
+  "frontend/src/index.css": "Global styles with OKLCH color system configured for dark theme with emerald green accents matching the CreatorVerse brand.",
+  "frontend/tailwind.config.js": "Tailwind configuration extended with custom slate and emerald color palettes for the dark theme and CreatorVerse branding."
+}

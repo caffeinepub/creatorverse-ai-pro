@@ -1,0 +1,175 @@
+{
+  "kind": "build_request",
+  "title": "Build CreatorVerse AI PRO - YouTube Content Creator Tool",
+  "projectName": "CreatorVerse AI PRO",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "text": "Implement AI chat interface with conversational memory that provides YouTube creator advice including tips on titles, viral content, scripts, and SEO when users ask questions",
+      "target": "both",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Chat interface displays user messages and AI responses in a scrollable chat box",
+        "AI responds to keywords: 'title', 'viral', 'script', 'seo', 'hello' with appropriate creator advice",
+        "Chat history persists during the session and scrolls to show latest messages",
+        "User can input questions and receive contextual responses about YouTube content creation"
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "text": "Create title generator that takes a topic input and generates YouTube video titles using emotional hooks including '🔥 Secret of', '😱 Shocking Truth About', 'Top 5', 'Ultimate Guide to', and 'You Must Know' prefixes randomly selected",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Topic input field accepts user-entered topics",
+        "Generate button produces titles combining random hook prefix with the topic",
+        "Generated title displays in a textarea output field",
+        "Each generation randomly selects from the 5 hook prefixes"
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "text": "Build script generator that creates structured YouTube video scripts with sections for hook, intro, three main points, and ending call-to-action using the entered topic",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Uses the topic from the title generator input field",
+        "Generated script includes: hook with topic reference, intro section, three numbered main points, and CTA ending",
+        "Script uses emoji formatting (🎬, 📌, 🔥, 🚀) for visual structure",
+        "Output displays in dedicated textarea"
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "text": "Implement SEO score checker that calculates a score out of 100 based on topic length and provides optimization tips for long-tail keywords and emotional words",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Score calculation based on topic length multiplied by 5, capped at 100",
+        "Output shows score in format 'SEO Score: X/100'",
+        "Includes optimization tip about using long-tail keywords and emotional words",
+        "Results display in dedicated textarea"
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "text": "Create tags generator that produces comma-separated YouTube tags including the topic, 'viral', 'youtube growth', 'trending video', and 'how to'",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Uses topic from title generator input field",
+        "Generates tags in format: 'topic, viral, youtube growth, trending video, how to'",
+        "Output displays as comma-separated string in textarea"
+      ]
+    },
+    {
+      "id": "REQ-6",
+      "text": "Build hashtag generator that creates space-removed hashtags from the topic and appends '#viral #youtube #creator' tags",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Removes all spaces from topic to create primary hashtag",
+        "Appends ' #viral #youtube #creator' to the generated hashtag",
+        "Output displays in dedicated textarea",
+        "Format example: '#topicname #viral #youtube #creator'"
+      ]
+    },
+    {
+      "id": "REQ-7",
+      "text": "Implement AI voice generator with 5 voice styles (normal, deep, soft, robot, fast) that uses browser speech synthesis to speak user-entered text with different rate and pitch settings for each style",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Dropdown selector offers 5 options: Normal, Deep, Soft, Robot, Fast Viral",
+        "Deep style uses rate 0.9 and pitch 0.7",
+        "Soft style uses rate 1 and pitch 1.4",
+        "Robot style uses rate 1.1 and pitch 0.5",
+        "Fast style uses rate 1.6 and pitch 1",
+        "Speak button triggers browser speech synthesis with selected style applied to textarea input"
+      ]
+    },
+    {
+      "id": "REQ-8",
+      "text": "Create thumbnail generator using HTML canvas that draws a yellow background (#facc15) with user-entered text centered in bold black font on a 400x250 pixel canvas",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Canvas element renders at 400x250 pixels",
+        "Background fills with yellow color (#facc15)",
+        "User-entered text from input field renders centered in bold 28px Arial black font",
+        "Generate button triggers canvas drawing",
+        "Canvas has white background and rounded corners styling"
+      ]
+    },
+    {
+      "id": "REQ-9",
+      "text": "Apply dark theme design with slate background (#0f172a), white text, green action buttons (#22c55e with #16a34a hover), rounded input fields and buttons, and dark chat box (#020617) matching the reference design",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Body background uses #0f172a slate color",
+        "All text renders in white",
+        "Buttons use #22c55e green with #16a34a hover state",
+        "Input fields, textareas, and selects have rounded borders (8px radius)",
+        "Chat box uses #020617 background with 220px height and rounded corners",
+        "Canvas has white background with rounded corners",
+        "Overall aesthetic matches the provided HTML design"
+      ]
+    }
+  ],
+  "constraints": [
+    "Use browser's native SpeechSynthesisUtterance API for voice generation",
+    "Thumbnail generation must use HTML canvas element, not external image generation",
+    "Chat responses must be rule-based pattern matching, not external AI API calls",
+    "All generators should work entirely client-side without backend storage"
+  ],
+  "nonGoals": [
+    "Integration with YouTube API for actual video uploads",
+    "Persistent storage of generated content across sessions",
+    "User authentication or multi-user support",
+    "Advanced AI language models or external AI service integration",
+    "Actual thumbnail image download functionality",
+    "Voice recording or custom voice training"
+  ],
+  "imageRequirements": {
+    "required": [],
+    "edits": []
+  }
+}

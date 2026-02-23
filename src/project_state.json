@@ -1,0 +1,143 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 3,
+  "summary": "CreatorVerse AI PRO - A YouTube content creator tool with AI chat, title generator, script generator, SEO score checker, tags generator, hashtag generator, AI voice generator with 5 styles, and thumbnail generator",
+  "architectural_notes": [
+    "Single-page HTML app with embedded CSS and JavaScript",
+    "Uses Web Speech API for text-to-speech voice generation",
+    "Canvas API for thumbnail image generation",
+    "Client-side only implementation (offline capable)",
+    "Dark theme with slate blue background (#0f172a)",
+    "Rule-based AI chat using keyword matching"
+  ],
+  "known_issues": [],
+  "isFixRequest": false,
+  "existing_features": [
+    {
+      "id": "feature-implement-ai-chat-interface-with-conversational-memory-that-provides-youtube-creator-advice-including-tips-on-titles-viral-content-scripts-and-seo-when-users-ask-questions",
+      "title": "Implement AI chat interface with conversational memory that provides YouTube creator advice including tips on titles, viral content, scripts, and SEO when users ask questions",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-title-generator-that-takes-a-topic-input-and-generates-youtube-video-titles-using-emotional-hooks-including-secret-of-shocking-truth-about-top-5-ultimate-guide-to-and-you-must-know-prefixes-randomly-selected",
+      "title": "Create title generator that takes a topic input and generates YouTube video titles using emotional hooks including '🔥 Secret of', '😱 Shocking Truth About', 'Top 5', 'Ultimate Guide to', and 'You Must Know' prefixes randomly selected",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-build-script-generator-that-creates-structured-youtube-video-scripts-with-sections-for-hook-intro-three-main-points-and-ending-call-to-action-using-the-entered-topic",
+      "title": "Build script generator that creates structured YouTube video scripts with sections for hook, intro, three main points, and ending call-to-action using the entered topic",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-seo-score-checker-that-calculates-a-score-out-of-100-based-on-topic-length-and-provides-optimization-tips-for-long-tail-keywords-and-emotional-words",
+      "title": "Implement SEO score checker that calculates a score out of 100 based on topic length and provides optimization tips for long-tail keywords and emotional words",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-tags-generator-that-produces-comma-separated-youtube-tags-including-the-topic-viral-youtube-growth-trending-video-and-how-to",
+      "title": "Create tags generator that produces comma-separated YouTube tags including the topic, 'viral', 'youtube growth', 'trending video', and 'how to'",
+      "reqIds": [
+        "REQ-5"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-build-hashtag-generator-that-creates-space-removed-hashtags-from-the-topic-and-appends-viral-youtube-creator-tags",
+      "title": "Build hashtag generator that creates space-removed hashtags from the topic and appends '#viral #youtube #creator' tags",
+      "reqIds": [
+        "REQ-6"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-ai-voice-generator-with-5-voice-styles-normal-deep-soft-robot-fast-that-uses-browser-speech-synthesis-to-speak-user-entered-text-with-different-rate-and-pitch-settings-for-each-style",
+      "title": "Implement AI voice generator with 5 voice styles (normal, deep, soft, robot, fast) that uses browser speech synthesis to speak user-entered text with different rate and pitch settings for each style",
+      "reqIds": [
+        "REQ-7"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-thumbnail-generator-using-html-canvas-that-draws-a-yellow-background-facc15-with-user-entered-text-centered-in-bold-black-font-on-a-400x250-pixel-canvas",
+      "title": "Create thumbnail generator using HTML canvas that draws a yellow background (#facc15) with user-entered text centered in bold black font on a 400x250 pixel canvas",
+      "reqIds": [
+        "REQ-8"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-apply-dark-theme-design-with-slate-background-0f172a-white-text-green-action-buttons-22c55e-with-16a34a-hover-rounded-input-fields-and-buttons-and-dark-chat-box-020617-matching-the-reference-design",
+      "title": "Apply dark theme design with slate background (#0f172a), white text, green action buttons (#22c55e with #16a34a hover), rounded input fields and buttons, and dark chat box (#020617) matching the reference design",
+      "reqIds": [
+        "REQ-9"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "AI chat with memory for YouTube creator tips",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-2",
+      "summary": "Title generator with emotional hooks",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-3",
+      "summary": "Script generator with structured format",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-4",
+      "summary": "SEO score checker",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-5",
+      "summary": "Tags generator",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-6",
+      "summary": "Hashtag generator",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-7",
+      "summary": "AI voice generator with 5 styles (normal, deep, soft, robot, fast)",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-8",
+      "summary": "Thumbnail generator using canvas",
+      "reqIds": [],
+      "status": "pending"
+    }
+  ],
+  "gameProjectType": "none",
+  "projectName": "CreatorVerse AI PRO",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}

@@ -1,0 +1,210 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Build CreatorVerse AI PRO - YouTube Content Creator Tool",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "summary": "Implement AI chat interface with conversational memory for YouTube creator advice",
+      "acceptanceCriteria": [
+        "Chat interface displays user messages and AI responses in a scrollable chat box",
+        "AI responds to keywords: 'title', 'viral', 'script', 'seo', 'hello' with appropriate creator advice",
+        "Chat history persists during the session and scrolls to show latest messages",
+        "User can input questions and receive contextual responses about YouTube content creation"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/ChatInterface.tsx",
+          "operation": "create",
+          "description": "Create chat interface component with message display, input field, and send button. Implement rule-based pattern matching to respond to keywords ('title', 'viral', 'script', 'seo', 'hello') with YouTube creator advice. Use React state to maintain chat history array with user and AI messages. Include auto-scroll to latest message functionality. Style with dark chat box (#020617 background, 220px height, rounded corners, scrollable overflow)."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Import and render ChatInterface component at the top of the main application layout. Position it prominently as the primary feature of the CreatorVerse AI PRO tool."
+        }
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "summary": "Create title generator with emotional hook prefixes",
+      "acceptanceCriteria": [
+        "Topic input field accepts user-entered topics",
+        "Generate button produces titles combining random hook prefix with the topic",
+        "Generated title displays in a textarea output field",
+        "Each generation randomly selects from the 5 hook prefixes"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/TitleGenerator.tsx",
+          "operation": "create",
+          "description": "Create title generator component with topic input field, generate button, and textarea output. Implement client-side logic to randomly select from 5 hook prefixes ('🔥 Secret of', '😱 Shocking Truth About', 'Top 5', 'Ultimate Guide to', 'You Must Know') and combine with user topic. Use React state to manage topic input and generated title. Apply rounded input styling (8px border-radius) and green action button (#22c55e background, #16a34a hover)."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Import and render TitleGenerator component in the main layout below the ChatInterface. Position it as part of the content creation tools section."
+        }
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "summary": "Build script generator with structured sections",
+      "acceptanceCriteria": [
+        "Uses the topic from the title generator input field",
+        "Generated script includes: hook with topic reference, intro section, three numbered main points, and CTA ending",
+        "Script uses emoji formatting (🎬, 📌, 🔥, 🚀) for visual structure",
+        "Output displays in dedicated textarea"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/ScriptGenerator.tsx",
+          "operation": "create",
+          "description": "Create script generator component with generate button and textarea output. Implement client-side logic to create structured script with sections: hook (🎬 + topic reference), intro (📌), three numbered main points (🔥), and CTA ending (🚀). Accept topic prop or shared state from TitleGenerator. Use React state to manage generated script. Apply rounded textarea styling (8px border-radius) and green action button."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Import and render ScriptGenerator component in the main layout. Implement shared state management (using React Context or props) to pass topic from TitleGenerator to ScriptGenerator, ensuring they work with the same topic input."
+        }
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "summary": "Implement SEO score checker with optimization tips",
+      "acceptanceCriteria": [
+        "Score calculation based on topic length multiplied by 5, capped at 100",
+        "Output shows score in format 'SEO Score: X/100'",
+        "Includes optimization tip about using long-tail keywords and emotional words",
+        "Results display in dedicated textarea"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/SEOChecker.tsx",
+          "operation": "create",
+          "description": "Create SEO checker component with check button and textarea output. Implement client-side calculation: score = Math.min(topicLength * 5, 100). Display result in format 'SEO Score: X/100' followed by optimization tips mentioning long-tail keywords and emotional words. Accept topic prop or shared state from TitleGenerator. Use React state for score results. Apply rounded textarea styling and green action button."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Import and render SEOChecker component in the main layout. Pass topic from shared state to enable score calculation based on the same topic used in title generation."
+        }
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "summary": "Create tags generator for YouTube tags",
+      "acceptanceCriteria": [
+        "Uses topic from title generator input field",
+        "Generates tags in format: 'topic, viral, youtube growth, trending video, how to'",
+        "Output displays as comma-separated string in textarea"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/TagsGenerator.tsx",
+          "operation": "create",
+          "description": "Create tags generator component with generate button and textarea output. Implement client-side logic to format tags as: 'topic, viral, youtube growth, trending video, how to'. Accept topic prop or shared state from TitleGenerator. Use React state to manage generated tags. Apply rounded textarea styling and green action button."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Import and render TagsGenerator component in the main layout. Pass topic from shared state to generate tags based on the same topic."
+        }
+      ]
+    },
+    {
+      "id": "REQ-6",
+      "summary": "Build hashtag generator with space removal",
+      "acceptanceCriteria": [
+        "Removes all spaces from topic to create primary hashtag",
+        "Appends ' #viral #youtube #creator' to the generated hashtag",
+        "Output displays in dedicated textarea",
+        "Format example: '#topicname #viral #youtube #creator'"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/HashtagGenerator.tsx",
+          "operation": "create",
+          "description": "Create hashtag generator component with generate button and textarea output. Implement client-side logic to remove all spaces from topic (using replace(/\\s/g, '')) and prepend '#', then append ' #viral #youtube #creator'. Accept topic prop or shared state from TitleGenerator. Use React state to manage generated hashtags. Apply rounded textarea styling and green action button."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Import and render HashtagGenerator component in the main layout. Pass topic from shared state to generate hashtags based on the same topic."
+        }
+      ]
+    },
+    {
+      "id": "REQ-7",
+      "summary": "Implement AI voice generator with 5 voice styles",
+      "acceptanceCriteria": [
+        "Dropdown selector offers 5 options: Normal, Deep, Soft, Robot, Fast Viral",
+        "Deep style uses rate 0.9 and pitch 0.7",
+        "Soft style uses rate 1 and pitch 1.4",
+        "Robot style uses rate 1.1 and pitch 0.5",
+        "Fast style uses rate 1.6 and pitch 1",
+        "Speak button triggers browser speech synthesis with selected style applied to textarea input"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/VoiceGenerator.tsx",
+          "operation": "create",
+          "description": "Create voice generator component with textarea input, voice style dropdown (Normal, Deep, Soft, Robot, Fast Viral), and speak button. Implement browser SpeechSynthesisUtterance API with style configurations: Normal (rate 1, pitch 1), Deep (rate 0.9, pitch 0.7), Soft (rate 1, pitch 1.4), Robot (rate 1.1, pitch 0.5), Fast (rate 1.6, pitch 1). Use React state for text input and selected voice style. Apply rounded input/select styling and green action button."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Import and render VoiceGenerator component in the main layout as part of the content creation tools section."
+        }
+      ]
+    },
+    {
+      "id": "REQ-8",
+      "summary": "Create thumbnail generator using HTML canvas",
+      "acceptanceCriteria": [
+        "Canvas element renders at 400x250 pixels",
+        "Background fills with yellow color (#facc15)",
+        "User-entered text from input field renders centered in bold 28px Arial black font",
+        "Generate button triggers canvas drawing",
+        "Canvas has white background and rounded corners styling"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/ThumbnailGenerator.tsx",
+          "operation": "create",
+          "description": "Create thumbnail generator component with text input field, generate button, and canvas element (400x250 pixels). Implement canvas drawing logic: fill with yellow background (#facc15), draw user text centered in bold 28px Arial black font. Use React useRef for canvas element and useEffect for drawing. Apply white background and rounded corners (8px border-radius) to canvas wrapper. Use green action button styling."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Import and render ThumbnailGenerator component in the main layout as part of the content creation tools section."
+        }
+      ]
+    },
+    {
+      "id": "REQ-9",
+      "summary": "Apply dark theme design with consistent styling",
+      "acceptanceCriteria": [
+        "Body background uses #0f172a slate color",
+        "All text renders in white",
+        "Buttons use #22c55e green with #16a34a hover state",
+        "Input fields, textareas, and selects have rounded borders (8px radius)",
+        "Chat box uses #020617 background with 220px height and rounded corners",
+        "Canvas has white background with rounded corners",
+        "Overall aesthetic matches the provided HTML design"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/index.css",
+          "operation": "modify",
+          "description": "Apply global dark theme styling: body background #0f172a, white text color. Define utility classes for green buttons (#22c55e background, #16a34a hover), rounded inputs/textareas/selects (8px border-radius, dark borders), dark chat box (#020617 background, 220px height, rounded corners, overflow-y auto). Add styles for canvas wrapper with white background and rounded corners."
+        },
+        {
+          "path": "frontend/tailwind.config.js",
+          "operation": "modify",
+          "description": "Extend Tailwind theme with custom colors: slate background (#0f172a), chat box dark (#020617), green action (#22c55e), green hover (#16a34a), yellow thumbnail (#facc15). Configure border radius utilities for 8px rounded corners. Ensure all components can reference these theme values consistently."
+        }
+      ]
+    }
+  ]
+}

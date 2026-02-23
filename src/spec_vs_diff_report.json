@@ -1,0 +1,56 @@
+{
+  "kind": "spec_vs_diff_report",
+  "version": "1.0",
+  "generatedAt": "2026-02-23T04:35:30.096Z",
+  "summary": "The implementation successfully delivers all 9 requirements for CreatorVerse AI PRO. All core features are implemented: AI chat with pattern matching, title generator with emotional hooks, script generator with structured format, SEO score checker, tags generator, hashtag generator, voice generator with 5 styles using browser SpeechSynthesis API, canvas-based thumbnail generator, and dark theme design. The implementation is complete and matches all acceptance criteria.",
+  "missing_requirements": [],
+  "hallucinated_features": [
+    {
+      "description": "Authentication system with Internet Identity integration (useInternetIdentity hook, InternetIdentityProvider, AuthClient)",
+      "reason": "BuildRequest explicitly excludes user authentication in non-goals: 'User authentication or multi-user support'. The diff includes hooks/useInternetIdentity.ts and auth-related infrastructure that was not requested.",
+      "evidence": [
+        "frontend/src/hooks/useInternetIdentity.ts",
+        "frontend/src/hooks/useActor.ts",
+        "frontend/src/main.tsx"
+      ]
+    },
+    {
+      "description": "Backend actor integration with QueryClient and actor hooks",
+      "reason": "All requirements specify frontend-only implementation working entirely client-side. The useActor hook and QueryClient setup for backend communication were not requested.",
+      "evidence": [
+        "frontend/src/hooks/useActor.ts",
+        "frontend/src/main.tsx"
+      ]
+    },
+    {
+      "description": "Footer with caffeine.ai attribution link",
+      "reason": "No requirement specified a footer or external attribution link to caffeine.ai. This appears to be promotional content not requested in the BuildRequest.",
+      "evidence": [
+        "frontend/src/App.tsx"
+      ]
+    }
+  ],
+  "confidence": 0.95,
+  "changed_files": [
+    "all_files_summary.json",
+    "backend/main.mo",
+    "frontend-file-summaries.txt",
+    "frontend/index.css",
+    "frontend/index.html",
+    "frontend/src/App.tsx",
+    "frontend/src/components/ChatInterface.tsx",
+    "frontend/src/components/HashtagGenerator.tsx",
+    "frontend/src/components/SEOChecker.tsx",
+    "frontend/src/components/ScriptGenerator.tsx",
+    "frontend/src/components/TagsGenerator.tsx",
+    "frontend/src/components/ThumbnailGenerator.tsx",
+    "frontend/src/components/TitleGenerator.tsx",
+    "frontend/src/components/VoiceGenerator.tsx",
+    "frontend/src/hooks/useActor.ts",
+    "frontend/src/hooks/useInternetIdentity.ts",
+    "frontend/src/index.css",
+    "frontend/src/main.tsx",
+    "frontend/tailwind.config.js",
+    "project_state.json"
+  ]
+}
